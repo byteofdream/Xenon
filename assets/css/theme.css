@@ -1,0 +1,57 @@
+﻿:root {
+  --bg: #f4f8ff;
+  --bg-accent-1: rgba(0, 198, 255, 0.14);
+  --bg-accent-2: rgba(255, 128, 102, 0.12);
+  --bg-accent-3: rgba(118, 87, 255, 0.1);
+  --surface: #ffffff;
+  --surface-border: rgba(216, 222, 229, 0.9);
+  --surface-blur: 0px;
+  --text: #101828;
+  --border: #d0d7e2;
+  --muted: #667085;
+  --shadow: 0 14px 34px rgba(16, 24, 40, 0.12);
+  --search-shadow: 0 4px 14px rgba(16, 24, 40, 0.16);
+  --button-bg: #eef2f7;
+  --button-border: #eef2f7;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --bg-accent-1: rgba(0, 198, 255, 0.24);
+  --bg-accent-2: rgba(255, 128, 102, 0.2);
+  --bg-accent-3: rgba(118, 87, 255, 0.18);
+  --surface: #121d33;
+  --surface-border: rgba(73, 88, 113, 0.85);
+  --surface-blur: 0px;
+  --text: #e4e7ec;
+  --border: #3d4b66;
+  --muted: #98a2b3;
+  --shadow: 0 16px 38px rgba(0, 0, 0, 0.5);
+  --search-shadow: 0 5px 16px rgba(0, 0, 0, 0.46);
+  --button-bg: #1f2a3f;
+  --button-border: #1f2a3f;
+}
+
+html[data-glass="on"] {
+  --surface: linear-gradient(140deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.26));
+  --surface-border: rgba(255, 255, 255, 0.55);
+  --surface-blur: 18px;
+  --shadow: 0 18px 46px rgba(16, 24, 40, 0.2);
+}
+
+html[data-theme="dark"][data-glass="on"] {
+  --surface: linear-gradient(145deg, rgba(35, 53, 84, 0.58), rgba(20, 30, 47, 0.35));
+  --surface-border: rgba(151, 173, 211, 0.4);
+  --surface-blur: 18px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 14%, var(--bg-accent-1), transparent 34%),
+    radial-gradient(circle at 84% 16%, var(--bg-accent-3), transparent 28%),
+    radial-gradient(circle at 86% 84%, var(--bg-accent-2), transparent 38%),
+    var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
