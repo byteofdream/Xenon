@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="light" data-glass="off" data-lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Xenon start page" />
+  <title>Xenon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+</head>
+<body>
+  <header class="topbar" aria-label="Top navigation">
+    <button id="langToggle" class="theme-toggle" type="button" aria-label="Сменить язык">Language: RU</button>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Сменить тему">Theme: Light</button>
+    <button id="glassToggle" class="theme-toggle" type="button" aria-label="Включить эффект Liquid Glass">Liquid: Off</button>
+    <a id="aboutLink" class="theme-toggle" href="about.html" aria-label="О проекте">About</a>
+  </header>
+
+  <main class="container">
+    <h1 class="logo" aria-label="Xenon logo">
+      <span>X</span><span>e</span><span>n</span><span>o</span><span>n</span>
+    </h1>
+    <p id="subtitle" class="subtitle">Точный поиск без лишнего шума</p>
+
+    <form id="searchForm" class="search-form" novalidate>
+      <label class="search-box" for="query">
+        <span class="search-icon" aria-hidden="true">&#128269;</span>
+        <input id="query" name="q" type="text" autocomplete="off" placeholder="Что хотите найти?" autofocus />
+      </label>
+      <button id="searchBtn" class="search-button" type="submit">Найти</button>
+    </form>
+
+    <section class="content" aria-label="Xenon details">
+      <p id="description" class="description">
+        Xenon создан как минималистичная стартовая страница: быстрый ввод запроса, мгновенный переход в поиск и гибкая кастомизация интерфейса.
+      </p>
+      <div class="chips" role="list" aria-label="Features">
+        <span id="chip1" class="chip" role="listitem">Мгновенный редирект</span>
+        <span id="chip2" class="chip" role="listitem">Светлая/тёмная тема</span>
+        <span id="chip3" class="chip" role="listitem">Liquid Glass режим</span>
+        <span id="chip4" class="chip" role="listitem">Русский/English</span>
+      </div>
+      <p id="hint" class="hint">Подсказка: нажми Enter, чтобы отправить запрос быстрее.</p>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

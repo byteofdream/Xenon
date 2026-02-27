@@ -1,0 +1,10 @@
+﻿# Common
+*.log
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
